@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">restaurant</string>
+    <string name="title_map">マップ</string>
+    <string name="title_lottery">抽選</string>
+    <string name="title_setting">設定</string>
+    <string name="fragment_lottery_button_oubou">応募</string>
+    <string name="fragment_setting_textview_lottery_history">応募履歴</string>
+    <string name="fragment_setting_textview_feedback">フィードバック</string>
+    <string name="fragment_setting_textview_legal">利用規約</string>
+    <string name="fragment_setting_textview_version">アプリ情報</string>
+</resources>
