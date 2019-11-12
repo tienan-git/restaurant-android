@@ -14,17 +14,19 @@
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="409dp"
-        android:layout_height="694dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/text_dashboard">
 
         <ImageView
             android:id="@+id/imageView"
@@ -32,6 +34,7 @@
             android:layout_height="262dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
+            android:contentDescription="@string/fragment_lottery_imageview_picture"
             app:srcCompat="@android:drawable/btn_star_big_on" />
 
         <TextView
@@ -39,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="37dp"
             android:gravity="center_horizontal|center_vertical"
-            android:text="掃除機1"
+            android:text="@string/fragment_lottery_textview_top_label"
             android:textAlignment="center"
             android:textSize="24sp" />
 
@@ -49,7 +52,7 @@
             android:layout_height="37dp"
             android:layout_marginTop="10dp"
             android:gravity="center_horizontal|center_vertical"
-            android:text="小型　テレビ1"
+            android:text="@string/fragment_lottery_textview_bottom_label"
             android:textAlignment="center"
             android:textSize="24sp" />
 
@@ -57,8 +60,92 @@
             android:id="@+id/button"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:textSize="30sp"
             tools:text="@string/fragment_lottery_button_oubou" />
 
     </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        tools:layout_editor_absoluteX="1dp">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="<応募人数>"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="26人"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="<締め切り>"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView55"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2018/09/26 (金) 18:00"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="<抽選結果発表>"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView56"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2018/09/27 (土) 10:00"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,9 @@
     <string name="title_lottery">抽選</string>
     <string name="title_setting">設定</string>
     <string name="fragment_lottery_button_oubou">応募</string>
+    <string name="fragment_lottery_imageview_picture">イメージ</string>
+    <string name="fragment_lottery_textview_top_label">掃除機1</string>
+    <string name="fragment_lottery_textview_bottom_label">小型　テレビ1</string>
     <string name="fragment_setting_textview_lottery_history">応募履歴</string>
     <string name="fragment_setting_textview_feedback">フィードバック</string>
     <string name="fragment_setting_textview_legal">利用規約</string>
