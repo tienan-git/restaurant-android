@@ -1,4 +1,4 @@
-package jp.sparkworks.restaurant.ui.home
+package jp.sparkworks.restaurant.ui.map
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,19 +14,12 @@ class MapFragment : Fragment() {
 
     private lateinit var mapViewModel: MapViewModel
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        mapViewModel =
-            ViewModelProviders.of(this).get(MapViewModel::class.java)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        mapViewModel = ViewModelProviders.of(this).get(MapViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_map, container, false)
         val textView: TextView = root.findViewById(R.id.text_home)
         mapViewModel.text.observe(this, Observer {
             textView.text = it
-
-
         })
         return root
     }

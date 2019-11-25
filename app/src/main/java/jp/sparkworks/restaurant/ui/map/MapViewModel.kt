@@ -1,4 +1,4 @@
-package jp.sparkworks.restaurant.ui.home
+package jp.sparkworks.restaurant.ui.map
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

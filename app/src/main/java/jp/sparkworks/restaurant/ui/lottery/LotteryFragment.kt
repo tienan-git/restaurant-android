@@ -14,13 +14,8 @@ class LotteryFragment : Fragment() {
 
     private lateinit var lotteryViewModel: LotteryViewModel
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        lotteryViewModel =
-            ViewModelProviders.of(this).get(LotteryViewModel::class.java)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        lotteryViewModel = ViewModelProviders.of(this).get(LotteryViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_lottery, container, false)
         val textView: TextView = root.findViewById(R.id.text_dashboard)
         lotteryViewModel.text.observe(this, Observer {

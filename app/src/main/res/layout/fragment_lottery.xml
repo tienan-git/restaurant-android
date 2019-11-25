@@ -86,7 +86,7 @@
             android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="<応募人数>"
+            android:text="応募人数"
             android:textSize="24sp" />
 
         <TextView
@@ -111,7 +111,7 @@
             android:id="@+id/textView22"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="<締め切り>"
+            android:text="締め切り"
             android:textSize="24sp" />
 
         <TextView
@@ -136,7 +136,7 @@
             android:id="@+id/textView23"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="<抽選結果発表>"
+            android:text="抽選結果発表"
             android:textSize="24sp" />
 
         <TextView

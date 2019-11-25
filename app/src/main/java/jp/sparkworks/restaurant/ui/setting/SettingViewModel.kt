@@ -1,4 +1,4 @@
-package jp.sparkworks.restaurant.ui.notifications
+package jp.sparkworks.restaurant.ui.setting
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
