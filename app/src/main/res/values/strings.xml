@@ -12,9 +12,8 @@
     <string name="fragment_setting_textview_feedback">フィードバック</string>
     <string name="fragment_setting_textview_legal">利用規約</string>
     <string name="fragment_setting_textview_version">アプリ情報</string>
-    <string name="setting_fragment_name">SETTING_ACTIVITY_FRAGMENT_NAME</string>
-    <string name="setting_fragment_name_lottery_history">LOTTERY_HISTORY_FRAGMENT</string>
-    <string name="setting_fragment_name_feedback">FEEDBACK_FRAGMENT</string>
-    <string name="setting_fragment_name_legal">LEGAL_FRAGMENT</string>
-    <string name="setting_fragment_name_appinfo">APPINFO_FRAGMENT</string>
+    <string name="setting_lottery_history_activity">LotteryHistoryActivity</string>
+    <string name="setting_feedback_activity">FeedbackActivity</string>
+    <string name="setting_legal_activity">LegalActivity</string>
+    <string name="setting_app_info_activity">AppInfoActivity</string>
 </resources>

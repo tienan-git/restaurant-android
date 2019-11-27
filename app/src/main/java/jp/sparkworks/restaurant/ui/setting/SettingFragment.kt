@@ -1,5 +1,6 @@
 package jp.sparkworks.restaurant.ui.setting
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -11,7 +12,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import jp.sparkworks.restaurant.R
-import jp.sparkworks.restaurant.ui.SettingActivity
+import jp.sparkworks.restaurant.ui.setting.settingActivities.AppInfoActivity
+import jp.sparkworks.restaurant.ui.setting.settingActivities.FeedbackActivity
+import jp.sparkworks.restaurant.ui.setting.settingActivities.LotteryHistoryActivity
+import jp.sparkworks.restaurant.ui.setting.settingActivities.SettingLotteryHistory
 
 class SettingFragment : Fragment() {
 
@@ -53,29 +57,35 @@ class SettingFragment : Fragment() {
 
         // 応募履歴
         lotteryHistory = view.findViewById<TextView>(R.id.lottery_history)
-        lotteryHistory.setOnClickListener(View.OnClickListener {
-            Log.d("Click", "lotteryHistory was Clicked")
-            startSettingActivity(getString(R.string.setting_fragment_name_lottery_history))
+        lotteryHistory.setOnClickListener({
+            val intent = Intent(activity, LotteryHistoryActivity::class.java)
+            startActivity(intent)
         })
 
         // フィードバック
         feedback = view.findViewById<TextView>(R.id.feedback)
-        feedback.setOnClickListener(View.OnClickListener {
-            startSettingActivity(getString(R.string.setting_fragment_name_feedback))
+        feedback.setOnClickListener({
+            val intent = Intent(activity, FeedbackActivity::class.java)
+            startActivity(intent)
         })
 
         //  利用規約
         legal = view.findViewById<TextView>(R.id.legal)
-        legal.setOnClickListener{ startSettingActivity(getString(R.string.setting_fragment_name_legal)) }
+        legal.setOnClickListener{
+            val intent = Intent(activity, FeedbackActivity::class.java)
+            startActivity(intent)
+        }
 
         //  アプリ情報
         appInfo = view.findViewById<TextView>(R.id.app_info)
-        appInfo.setOnClickListener{ startSettingActivity(getString(R.string.setting_fragment_name_appinfo)) }
+        appInfo.setOnClickListener{
+            val intent = Intent(activity, AppInfoActivity::class.java)
+            startActivity(intent)
+        }
     }
 
-    private fun startSettingActivity(fragmentName: String) {
-        val intent = Intent(activity, SettingActivity::class.java)
-        intent.putExtra(getString(R.string.setting_fragment_name), fragmentName)
+    private fun startSettingActivity(activityName: Class<Any>) {
+        val intent = Intent(activity, activityName)
         startActivity(intent)
     }
 }

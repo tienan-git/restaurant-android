@@ -14,13 +14,24 @@
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.SettingActivity"
-            android:label="@string/setting_acticity"
+            android:name=".ui.setting.settingActivities.SettingLotteryHistory"
+            android:label="@string/setting_lottery_history_activity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ui.setting.settingActivities.FeedbackActivity"
+            android:label="@string/setting_feedback_activity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ui.setting.settingActivities.LegalActivity"
+            android:label="@string/setting_legal_activity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ui.setting.settingActivities.AppInfoActivity"
+            android:label="@string/setting_app_info_activity"
             android:parentActivityName=".MainActivity" />
     </application>
 
